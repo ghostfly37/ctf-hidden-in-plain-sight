@@ -1,11 +1,16 @@
 // Functions
-export function goToAfter(path, timeDelay) {
+export function goToAfter(name, timeDelay) {
+    let path;
     if (path !== "index") {
-        path = `./pages/${path}.html`;
+        path = getRelativePath(`./pages/${name}.html`);
     } else {
-        path = `./${path}.html`;
+        path = getRelativePath(`./${name}.html`);
     }
     setTimeout(() => window.location.assign(path), timeDelay);
+}
+
+function getRelativePath(path) {
+    return (window.location.pathname.endsWith("index.html") ? "" : ".") + path;
 }
 
 export function placeFloatingIcons() {
@@ -105,9 +110,8 @@ export function applyDownloadSounds(elements) {
 }
 
 // Sounds
-const buttonHoverSound = new Audio("./assets/sounds/button-hover.wav");
-const buttonStartSound = new Audio("./assets/sounds/button-start.wav");
-const successSound = new Audio("./assets/sounds/success.flac");
-const failureSound = new Audio("./assets/sounds/failure.wav");
-
-const downloadSound = new Audio("./assets/sounds/download.wav");
+const buttonHoverSound = new Audio(getRelativePath("./assets/sounds/button-hover.wav"));
+const buttonStartSound = new Audio(getRelativePath("./assets/sounds/button-start.wav"));
+const successSound = new Audio(getRelativePath("./assets/sounds/success.flac"));
+const failureSound = new Audio(getRelativePath("./assets/sounds/failure.wav"));
+const downloadSound = new Audio(getRelativePath("./assets/sounds/download.wav"));
