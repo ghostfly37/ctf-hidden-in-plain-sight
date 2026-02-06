@@ -109,9 +109,16 @@ export function applyDownloadSounds(elements) {
     }));
 }
 
+window.onpageshow = function (event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
+};
+
 // Sounds
 const buttonHoverSound = new Audio(getRelativePath("./assets/sounds/button-hover.wav"));
 const buttonStartSound = new Audio(getRelativePath("./assets/sounds/button-start.wav"));
 const successSound = new Audio(getRelativePath("./assets/sounds/success.flac"));
 const failureSound = new Audio(getRelativePath("./assets/sounds/failure.wav"));
 const downloadSound = new Audio(getRelativePath("./assets/sounds/download.wav"));
+
