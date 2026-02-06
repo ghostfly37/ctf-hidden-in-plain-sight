@@ -10,7 +10,7 @@ export function goToAfter(name, timeDelay) {
 }
 
 function getRelativePath(path) {
-    return (window.location.pathname.endsWith("index.html") ? "" : ".") + path;
+    return (window.location.pathname.endsWith("index.html") || window.location.pathname.endsWith("/") ? "" : ".") + path;
 }
 
 export function placeFloatingIcons() {
