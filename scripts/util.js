@@ -1,9 +1,9 @@
 // Functions
 export function goToAfter(path, timeDelay) {
     if (path !== "index") {
-        path = `../pages/${path}.html`;
+        path = `./pages/${path}.html`;
     } else {
-        path = `../${path}.html`;
+        path = `./${path}.html`;
     }
     setTimeout(() => window.location.assign(path), timeDelay);
 }
@@ -105,8 +105,9 @@ export function applyDownloadSounds(elements) {
 }
 
 // Sounds
-const buttonHoverSound = new Audio("../assets/sounds/button-hover.wav");
-const buttonStartSound = new Audio("../assets/sounds/button-start.wav");
-const successSound = new Audio("../assets/sounds/success.flac");
-const failureSound = new Audio("../assets/sounds/failure.wav");
-const downloadSound = new Audio("../assets/sounds/download.wav");
+const buttonHoverSound = new Audio("./assets/sounds/button-hover.wav");
+const buttonStartSound = new Audio("./assets/sounds/button-start.wav");
+const successSound = new Audio("./assets/sounds/success.flac");
+const failureSound = new Audio("./assets/sounds/failure.wav");
+
+const downloadSound = new Audio("./assets/sounds/download.wav");
