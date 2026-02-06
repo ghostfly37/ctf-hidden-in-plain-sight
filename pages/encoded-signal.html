@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hidden In Plain Sight</title>
+    <link rel="icon" href="../assets/icons/logo.png">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/general.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.boxicons.com/transformations.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        Encoded Signal
+        <i class="bx bx-mask bx-fw"></i>
+    </div>
+    <div class="generic-green-container">
+        The next signal appears intentionally encoded. <br>
+        Decoding may reveal its intended structure.
+    </div>
+    <div class="generic-green-container">
+        <div class="vertical-container center-all">
+            Intercepted Signal
+            <div class="horizontal-container">
+                <i class="bx bx-scan-barcode bx-md terminal-icon js-copy-text"></i>
+                <div class="terminal-container">
+                    <div class="terminal-line"></div>
+                    <div class="terminal-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="generic-green-container">
+        <div class="vertical-container">
+            <div class="horizontal-container center-all">
+                <div>
+                    Enter Decoded Value:
+                    <input type="text" class="decoded-input">
+                </div>
+            </div>
+            <button class="submit-decoded-input">Submit</button>
+        </div>
+    </div>
+    <i class="bxf bx-thunder bx-3xl floating-icon" data-bottom="250px" data-right="300px" data-rotate="-15deg"></i>
+    <i class="bxf bx-crown bx-3xl floating-icon" data-bottom="450px" data-right="1250px" data-rotate="30deg"></i>
+    <div class="fade-in-block" data-fade-time="500"></div>
+    <div class="fade-out-block" data-fade-time="500"></div>
+    <script src="../scripts/encoded-signal.js" type="module"></script>
+    <script src="../scripts/input-level.js" type="module"></script>
+</body>
+
+</html>

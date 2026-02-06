@@ -1,0 +1,125 @@
+.outer-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 10px;
+
+    margin-top: 30px;
+    padding: 15px 15px 25px;
+
+    background-color: rgba(from var(--primary-shadow) r g b / 0.17);
+    backdrop-filter: blur(3px);
+
+    border: 3px solid var(--primary-shadow);
+    border-bottom: 7px solid var(--primary-shadow);
+    corner-shape: squircle;
+    border-radius: 25px;
+
+    width: 900px;
+    aspect-ratio: 2;
+
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.outer-container:hover {
+    background-color: rgba(from var(--primary-shadow) r g b / 0.3);
+    backdrop-filter: blur(20px);
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+
+    transition: all 200ms ease;
+}
+
+.inner-container:hover {
+    box-shadow: 0 0 10px var(--primary-color), 0 0 10px var(--primary-color) inset;
+}
+
+.vertical-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.title-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+
+    padding: 5px 10px 4px;
+
+    font-weight: 900;
+    color: rgba(from var(--secondary-color) r g b / 0.8);
+
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    height: 30px;
+}
+
+.title-bar i:hover {
+    background-color: rgba(from var(--secondary-color) r g b / 0.3);
+    text-shadow: 0 0 5px white;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(from var(--secondary-color) r g b / 0.2);
+    color: var(--secondary-color);
+
+    gap: 15px;
+    margin: 12px 0 0;
+    padding: 10px;
+
+    border: 3px solid rgba(from var(--secondary-color) r g b / 0.4);
+    border: 3px solid var(--secondary-color);
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    transition: all 200ms ease;
+}
+
+.info-box:hover {
+    box-shadow: 0 0 10px var(--secondary-color), 0 0 10px var(--secondary-color) inset;
+}
+
+.info-box p {
+    color: inherit;
+    line-height: 1.35;
+}
+
+.info-box .info-title {
+    font-size: 32px;
+    text-decoration: dotted underline;
+}
+
+.start-container {
+    justify-content: center;
+    gap: 15px;
+    padding: 0 30px;
+}
+
+.start-text {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 32px;
+    line-height: 1;
+    text-shadow: 0 0 5px rgba(from var(--primary-color) r g b / 0.7);
+}
+
+.start-container i {
+    margin: 0 -10px;
+}
+
+.start-button {
+    padding: 14px;
+}

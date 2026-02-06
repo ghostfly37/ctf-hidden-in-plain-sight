@@ -1,0 +1,292 @@
+* {
+    font-family: "Google Sans Code";
+    margin: 0;
+    padding: 0;
+    color: white
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+div {
+    color: inherit;
+}
+
+::selection {
+    background-color: rgba(0 0 0 / 0.3);
+}
+
+body {
+    background-color: black;
+    background-image: repeating-linear-gradient(to right, transparent 0, transparent 48px, rgba(0 255 0 / 0.1) 52px, transparent 54px), repeating-linear-gradient(transparent 0, transparent 48px, rgba(0 255 0 / 0.1) 52px, transparent 54px), linear-gradient(transparent 50%, rgba(0 255 0 / 0), rgba(0 255 0 / 0.3));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    color: inherit;
+    transition: inherit;
+}
+
+a {
+    color: var(--primary-color);
+    font-size: 20px;
+    text-decoration: none;
+
+    text-shadow: 0 0 4px rgba(from var(--primary-color) r g b / 0.6);
+
+    transition: all 150ms ease;
+}
+
+a:hover {
+    text-shadow: 0 0 12px rgba(from var(--primary-color) r g b / 0.6);
+    scale: 1.05;
+}
+
+a i {
+    margin: 0 -10px;
+}
+
+:root {
+    --primary-color: rgb(55, 186, 48);
+    --primary-shadow: rgb(33, 119, 28);
+    --secondary-color: rgb(255, 174, 0);
+    /* --neutral-color: rgb(51, 51, 51); */
+}
+
+/* Title */
+.title {
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--primary-color);
+
+    background-color: rgba(from var(--primary-color) r g b / 0.3);
+
+    padding: 20px 50px 30px;
+    border: 3px solid var(--primary-color);
+    corner-shape: bevel squircle;
+    border-radius: 40px 20px;
+
+    text-shadow: 0px 5px 0px rgba(from var(--primary-shadow) r g b / 0.7);
+    box-shadow: 0px 0px 15px 2px var(--primary-color), 0px -8px 0px var(--primary-shadow) inset, 0px -10px 2px 1px var(--primary-color) inset;
+
+    transition: all 0.3s ease;
+}
+
+.title i {
+    margin: 0 -10px;
+}
+
+.title:hover {
+    color: var(--primary-shadow);
+    text-shadow: none;
+    box-shadow: 0px -8px 0px var(--primary-shadow) inset, 0px -10px 2px 1px var(--primary-color) inset;
+    scale: 0.98;
+}
+
+.title:hover i {
+    transform: rotate(-15deg);
+}
+
+button {
+    background-color: rgba(from var(--secondary-color) r g b / 0.3);
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(255 255 255 / 0.7);
+
+    padding: 7px;
+
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition: all 150ms ease;
+}
+
+button:hover {
+    background-color: rgba(from var(--secondary-color) r g b / 0.5);
+    text-shadow: 0 0 7px white;
+    box-shadow: 0 0 15px rgba(from var(--secondary-color) r g b / 0.7);
+    scale: 1.03;
+}
+
+input {
+    background-color: rgba(from var(--secondary-color) r g b / 0.3);
+
+    padding: 8px;
+    outline: none;
+
+    border: 3px solid var(--secondary-color);
+    border-radius: 15px;
+    transition: all 150ms ease;
+}
+
+input:hover {
+    text-shadow: 0 0 5px rgba(255 255 255 / 0.4);
+    background-color: rgba(from var(--secondary-color) r g b / 0.5);
+}
+
+input:active {
+    box-shadow: 0 0 8px rgba(from var(--secondary-color) r g b / 0.4);
+    scale: 1.03;
+}
+
+.input-failure {
+    background-color: rgba(from red r g b / 0.3);
+    border: 3px solid rgb(255 0 0);
+}
+
+.input-failure:hover {
+    background-color: rgba(from red r g b / 0.5);
+}
+
+.input-failure:active {
+    box-shadow: 0 0 8px rgba(from red r g b / 0.4);
+}
+
+.generic-green-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 30px;
+    padding: 15px;
+
+    background-color: rgba(from var(--primary-shadow) r g b / 0.17);
+    color: var(--primary-color);
+    backdrop-filter: blur(3px);
+
+    border: 3px solid var(--primary-shadow);
+    border-bottom: 7px solid var(--primary-shadow);
+    corner-shape: squircle;
+    border-radius: 25px;
+
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.generic-green-container:hover {
+    background-color: rgba(from var(--primary-shadow) r g b / 0.3);
+    backdrop-filter: blur(20px);
+}
+
+.terminal-container {
+    display: flex;
+
+    background-color: rgba(from var(--secondary-color) r g b / 0.2);
+    color: var(--secondary-color);
+
+    padding: 10px;
+    gap: 5px;
+
+    border: 3px solid rgba(from var(--secondary-color) r g b / 0.4);
+    corner-shape: notch;
+
+    transition: all 300ms ease;
+}
+
+.terminal-container:hover {
+    scale: 1.03 1;
+}
+
+.terminal-container .terminal-line {
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    width: 2.5px;
+}
+
+.terminal-icon {
+    position: relative;
+    color: var(--secondary-color);
+    text-shadow: 0 0 15px var(--secondary-color);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.terminal-icon:hover {
+    scale: 1.06;
+    rotate: -10deg;
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.center-all {
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-out-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: -1000;
+    transition: opacity 500ms ease;
+}
+
+.fade-in-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    /* background-color: var(--primary-color); */
+    background-color: black;
+    z-index: 10;
+    transition: opacity 500ms ease;
+}
+
+.floating-icon {
+    position: absolute;
+    bottom: 300px;
+    color: rgba(from var(--primary-shadow) r g b / 0.3);
+    text-shadow: 0 0 7px rgba(from var(--primary-shadow) r g b / 0.6);
+
+    transition: all 300ms ease;
+}
+
+.floating-icon:hover {
+    color: var(--primary-color);
+    transform: rotate(35deg);
+}
+
+.submit-decoded-input,
+.next-input {
+    padding: 7px 150px;
+}
+
+/* .cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(from var(--primary-color) r g b / 0.6);
+
+    font-size: 24px;
+    text-shadow: 0 0 5px white;
+} */
