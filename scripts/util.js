@@ -121,4 +121,3 @@ const buttonStartSound = new Audio(getRelativePath("./assets/sounds/button-start
 const successSound = new Audio(getRelativePath("./assets/sounds/success.flac"));
 const failureSound = new Audio(getRelativePath("./assets/sounds/failure.wav"));
 const downloadSound = new Audio(getRelativePath("./assets/sounds/download.wav"));
-
